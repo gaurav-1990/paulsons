@@ -1,0 +1,75 @@
+
+.cont {
+    width: 100%;
+    height: 1000px;
+    padding: 0 0;
+    position: relative;
+}
+.slider {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: 46%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    overflow: hidden;
+    position: relative;
+}
+.slider ul, .slider ul li {width: 100%; height: 100%}
+.slider ul {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+.slider ul li {
+    text-align: center;
+    line-height: 400px;
+    font-size: 50px;
+    color: #aaa;
+    position: relative;
+}
+
+.slider ol {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    padding-right: 15px;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    list-style: none;
+}
+.slider ol li {
+    width: 7px;
+    height: 30px;
+    border-bottom: none;
+    margin-bottom: 5px;
+    color: #999;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.slider ol li:hover, .slider ol li.active {
+    background: transparent;
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.slider ol li:hover::before, .slider ol li.active::before{
+    position: absolute;
+    top: 39px;
+    left: -28px;
+    content: "";
+    width: 26px;
+    height: 0px;
+    background-color: #fff;
+}

@@ -1,0 +1,394 @@
+@media (max-width: 1200px){
+.cloth-block .cloth-block-in .colections .img-set {
+    overflow: hidden;
+    height: 368px;
+}
+}
+@media (max-width: 1024px){
+  .sign-up-form .modal-dialog {
+   
+    width: 47%;
+}
+    
+    .cloth-block .cloth-block-in .colections .img-set {
+    overflow: hidden;
+    height: 289px;
+}
+.cloth-block .cloth-block-in .colections .for-query .know-more {
+    padding: 9px 26px;
+   
+}
+.foot-news .foot-news-in input {
+
+    width: 32%;
+ 
+}
+.top-nav .left-sec ul li.tim {
+   
+    display: none;
+}
+}
+@media (max-width: 900px){
+    .show div{/* display: none !important; *//* display: none; */}
+  
+    .slider-top {
+    padding: 0px 36px;
+    position: relative;
+    z-index: 0;
+}
+    
+    .cloth-block .cloth-block-in .colections .img-set {
+    overflow: hidden;
+    height: 300px;
+}
+.cloth-block .cloth-block-in .colections .for-query .know-more {
+    padding: 9px 28px;
+    
+}
+  
+.product-detal-slider .opecy .heading-tag h3 {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    font-size: 62px;
+    color: #fff;
+}
+.follow-us {
+    width: 96%;
+    float: right;
+}
+.foot-news .foot-news-in .subcrip button {
+    background-color: #b8292f;
+    padding: 15px 35px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    width: inherit;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    border: 0px solid #b83a3e;
+    margin-left: 4px;
+}
+.top-nav .left-sec ul li a {
+    font-size: 14px;
+ 
+}
+
+.top-nav .right-sec ul li a {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+}
+.top-nav .left-sec ul li i {
+    color: #fff;
+    font-size: 16px;
+}
+}
+@media (max-width: 768px){
+    
+    .product-detal-part .category-block .colections .img-set {
+    overflow: hidden;
+    height: 511px;
+}
+    .price-tag {
+    width: 100%;
+    margin-top: 13px;
+}
+    
+      .top-nav .right-sec {
+    display: none;
+    float: left;
+    text-align: right;
+}
+    
+}
+@media (max-width: 667px){
+    .sign-up-form .modal-dialog {
+    /* margin: 0; */
+    margin-top: 177px;
+    /* background-color: #fff; */
+    width: 90%;
+    margin: 0 auto;
+}
+.sign-up-form .modal-dialog .modal-content .submit button {
+  
+    padding: 8px 84px;
+   
+}
+    .about-us-sec {
+    margin: 0px 19px;
+}
+    .logo a {
+ 
+  background-size: 126px;
+}
+
+.sticky .logi {
+
+    background-size: 126px;
+    
+}
+    .slider-top {
+    padding: 0px 0px;
+  
+}
+.slider-top .slider-top-img {
+    height: inherit;
+    margin-top: 0px;
+}
+	.head-title h2{
+  font-size: 24px;
+  padding-top: 4px;
+  }
+    
+    .head-title h2:before {
+    left: -78px;
+    background-size: 43%;
+    top: 12px;
+    width: 210px;
+}
+
+.head-title h2:after {right: -76px;background-size: 45%;top: -24px;width: 210px;}
+
+.top-nav .right-sec {
+    
+    display: none;
+}
+.head-title {
+   
+    padding: 3px 0px;
+}
+
+.menu-bargar {
+  top: 81px;
+  font-size: 22px;
+  left: 10px;
+}
+.sticky .menu-bargar {
+ margin-top: -63px;
+ font-size: 22px;
+}
+.product-detal-slider .opecy .heading-tag h3 {
+   
+    font-size: 23px;
+    
+}
+.product-detal-part .product-discription-part h2 {
+   font-size: 21px;
+}
+
+.product-detal-part .product-discription-part .query-sec {
+   width: 100%;
+   bottom: -5px;
+}
+
+.product-detal-part .product-discription-part {
+    background-color: #fff;
+    padding: 30px 10px 30px 13px;
+    
+}
+.follow-us {
+    width: 57%;
+    float: left;
+    margin-top: 12px;
+}
+.Shop img {
+    width: 35%;
+    padding-bottom: 14px;
+}
+  .menurow {
+    width: 100%;
+    height: 65px;
+}
+.top-nav .left-sec ul li .line:after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.top-nav .left-sec ul li {
+   
+    width: 50%;
+    float: left;
+}
+.top-nav .left-sec ul li a {
+    font-size: 15px;
+    /* padding-left: 26px; */
+    text-align: center;
+    display: block;
+}
+
+.box1 h2 {
+  
+    font-size: 18px;
+  
+}
+.box1 {
+
+    top: 14%;
+    
+}
+.box1 p{
+
+       font-size: 13px;
+    
+}
+.footer {
+   
+    text-align: center;
+}
+.Shop ul {
+    padding-left: 0;
+    float: left;
+    color: #807b7b;
+    width: 100%;
+    list-style-type: none;
+}
+
+}
+
+
+@media (max-width: 480px){
+    .cloth-block .cloth-block-in .colections .img-set {
+    overflow: hidden;
+    height: 508px;
+}
+    
+    .contact-part .contact-address .contact-wp h3 {
+    position: relative;
+    margin: 0;
+    padding: 13px 0px;
+    font-size: 14px;
+}
+ .foot-news .foot-news-in .subcrip {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+  
+    .foot-news .foot-news-in input {
+  width: 100%;
+  float: inherit;
+  margin-bottom: 10px;
+}
+.foot-news .foot-news-in button {
+    background-color: #b83a3e;
+    padding: 15px 35px;
+    color: #fff;
+    width: 239px;
+    /* margin-left: 18px; */
+    margin: 8px 35px;
+    /* float: right; */
+}
+.follow-us {
+    width: 70%;
+    float: right;
+}
+.top-nav .left-sec ul li a {font-size: 13px;}
+.top-nav .left-sec ul li i {
+   font-size: 14px;
+}
+.product-detal-slider .opecy .heading-tag h3 {
+    font-size: 18px;
+}
+.product-detal-slider .opecy .heading-tag a {
+    
+    font-size: 11px;
+}
+.price-tag .price-top {
+   
+/* width: 69%; */
+}
+.price-tag .price-top span {
+   
+    font-size: 24px;
+  
+}
+.price-tag .price-top h3 {
+    float: left;
+    margin: 11px 0px;
+    font-size: 22px;
+    color: #d5181e;
+}
+
+.product-detal-part .category-block .colections .img-set {
+    overflow: hidden;
+    height: 562px;
+}
+}
+@media (max-width: 414px){
+ 
+}
+@media (max-width: 375px){
+.price-tag {
+    width: 100%;
+    margin-top: 13px;
+}
+
+.cloth-block .cloth-block-in .colections .img-set {
+    overflow: hidden;
+    height: 452px;
+}
+.product-detal-part .category-block .colections .img-set {
+    overflow: hidden;
+    height: 507px;
+}
+}
+
+
+@media (max-width: 360px){
+ 
+
+
+
+.head-title h2 {
+    font-size: 20px;
+    padding-top: 4px;
+}
+
+
+}
+@media (max-width: 320px){
+    .cloth-block .cloth-block-in .colections .img-set {
+    overflow: hidden;
+    height: 380px;
+}
+
+.product-detal-part .category-block .colections .img-set {
+    overflow: hidden;
+    height: 416px;
+}
+  .product-detal-part .product-discription-part .query-sec .send {
+  
+    padding: 8px 15px;
+    margin-right: 5px;
+}
+
+.product-detal-part .product-discription-part .query-sec .contact {
+    
+    padding: 8px 15px;
+  
+    margin-right: 5px;
+}
+.product-detal-part .product-discription-part .query-sec .wts-app {
+    
+    padding: 7px 15px;
+  
+}
+ 
+.top-nav .left-sec ul li a {
+    font-size: 10px;
+}
+  
+
+
+.head-title h2 {
+    font-size: 14px;
+    padding-top: 4px;
+}
+.show {
+    width: 289px;
+    height: 289px;
+}
+
+}

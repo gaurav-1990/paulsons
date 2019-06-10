@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /product-detail.php
+Disallow: /fabrics.php
+Disallow: /contact.php
+Disallow: /about-us.php
+
