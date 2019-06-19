@@ -302,7 +302,6 @@ $res=$stmt->fetch();
 
 <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" >
 
-
 <script type="" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script type="" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
 

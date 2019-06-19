@@ -4,14 +4,45 @@ include 'connection.php';
 extract($_REQUEST);
 if(isset($save))
 {
-	$img1=$_FILES['img1']['name'];
-	$img2=$_FILES['img2']['name'];
-	$img3=$_FILES['img3']['name'];
-	$img4=$_FILES['img4']['name'];
-	$img5=$_FILES['img5']['name'];
-	$query="insert into tbl_product(cat_id,pro_name,available,pro_details,note,image1,image2,image3,image4,main_img,pro_price,f_act_price,f_offer_price,f_offer,is_new,single_price,meta_desc,meta_key,title) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	$img3="";
+	$img4 ="";
+	//$img5 ="";
+
+	$path_parts1 = pathinfo($_FILES['img1']['name']);
+
+	$img1 = $path_parts1['filename'].'_'.time().'.'.$path_parts1['extension'];
+
+	$path_parts2 = pathinfo($_FILES['img2']['name']);
+	$img2 = $path_parts2['filename'].'_'.time().'.'.$path_parts2['extension'];
+
+	if(isset($_FILES['img3']['name']) && $_FILES['img3']['name']!="")
+	{
+
+		  $path_parts3 = pathinfo($_FILES['img3']['name']);
+		 
+		$img3 = $path_parts3['filename'].'_'.time().'.'.$path_parts3['extension'];
+	}
+
+	if(isset($_FILES['img4']['name']) && $_FILES['img4']['name']!="")
+	{
+		$path_parts4 = pathinfo($_FILES['img4']['name']);
+		$img4 = $path_parts4['filename'].'_'.time().'.'.$path_parts4['extension'];
+	}
+
+	if(isset($_FILES['img5']['name']) && $_FILES['img5']['name']!="")
+	{
+		$path_parts5 = pathinfo($_FILES['img5']['name']);
+		$img5 = $path_parts5['filename'].'_'.time().'.'.$path_parts5['extension'];
+	}
+
+	// $img1=$_FILES['img1']['name'];
+	// $img2=$_FILES['img2']['name'];
+	// $img3=$_FILES['img3']['name'];
+	// $img4=$_FILES['img4']['name'];
+	// $img5=$_FILES['img5']['name'];
+	$query="insert into tbl_product(cat_id,pro_name,available,pro_details,note,image1,image2,image3,image4,main_img,f_act_price,f_offer_price,f_offer,is_new,single_price,meta_desc,meta_key,title) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	$stmt=$con->prepare($query);
-	$stmt->execute([$cat, $pro_name, $stock, $pro_detail, $note, $img1, $img2, $img3, $img4, $img5, $pro_price, $f_act_price, $offer_price, $offer, $is_new, $single_price, $meta_desc, $meta_key, $title]);
+	$stmt->execute([$cat, $pro_name, $stock, $pro_detail, $note, $img1, $img2, $img3, $img4, $img5, $f_act_price, $offer_price, $offer, $is_new, $single_price, $meta_desc, $meta_key, $title]);
 	
 	$pid=$con->lastInsertId();
 
@@ -23,11 +54,23 @@ if(isset($save))
 	$cat=$res['cat_name'];
 
 
-	move_uploaded_file($_FILES['img1']['tmp_name'], "img/$cat/".$_FILES['img1']['name']);
-	move_uploaded_file($_FILES['img2']['tmp_name'], "img/$cat/".$_FILES['img2']['name']);
-	move_uploaded_file($_FILES['img3']['tmp_name'], "img/$cat/".$_FILES['img3']['name']);
-	move_uploaded_file($_FILES['img4']['tmp_name'], "img/$cat/".$_FILES['img4']['name']);
-	move_uploaded_file($_FILES['img5']['tmp_name'], "img/$cat/".$_FILES['img5']['name']);
+	move_uploaded_file($_FILES['img1']['tmp_name'], "img/$cat/".$img1);
+	move_uploaded_file($_FILES['img2']['tmp_name'], "img/$cat/".$img2);
+	
+	if(isset($_FILES['img3']['name']))
+	{
+		move_uploaded_file($_FILES['img3']['tmp_name'], "img/$cat/".$img3);
+	}
+	
+	if(isset($_FILES['img4']['name']))
+	{
+		move_uploaded_file($_FILES['img4']['tmp_name'], "img/$cat/".$img4);
+	}
+
+	if(isset($_FILES['img5']['name']))
+	{
+		move_uploaded_file($_FILES['img5']['tmp_name'], "img/$cat/".$img5);
+	}
 }
 ?>
 <!DOCTYPE html>

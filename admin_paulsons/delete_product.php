@@ -11,11 +11,11 @@ $img4=$res['image4'];
 $img5=$res['main_img'];
 $cat_name=$res['cat_name'];
 
-unlink("img/$cat_name/$img1");
-unlink("img/$cat_name/$img2");
-unlink("img/$cat_name/$img3");
-unlink("img/$cat_name/$img4");
-unlink("img/$cat_name/$img5");
+// unlink("img/$cat_name/$img1");
+// unlink("img/$cat_name/$img2");
+// unlink("img/$cat_name/$img3");
+// unlink("img/$cat_name/$img4");
+// unlink("img/$cat_name/$img5");
 
 $sql="delete from tbl_product where id=?";
 $stmt1=$con->prepare($sql);

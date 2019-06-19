@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 include 'connection.php';
 
 $id=$_GET['id'];
@@ -18,62 +19,105 @@ extract($_REQUEST);
 if(isset($update))
 {
 
-	$img1=$_FILES['img1']['name'];
-
-	$hidden_img1=$_POST['hide_img1'];
-	
-	if($img1=='')
+	if(isset($_FILES['img1']['name']) && $_FILES['img1']['name']!="")
 	{
+		$path_parts1 = pathinfo($_FILES['img1']['name']);
+		$img1 = $path_parts1['filename'].'_'.time().'.'.$path_parts1['extension'];
+		//$img1=$_FILES['img1']['name'];
+	}
+	else
+	{
+		$hidden_img1=$_POST['hide_img1'];
 		$img1=$hidden_img1;
+		// if($img1=='')
+		// {
+			
+		// }
 	}
-
 	
-	$img2=$_FILES['img2']['name'];
 
-	$hidden_img2=$_POST['hide_img2'];
-	
-	if($img2=='')
+	if(isset($_FILES['img2']['name']) && $_FILES['img2']['name']!="")
 	{
+		$path_parts2 = pathinfo($_FILES['img2']['name']);
+		$img2 = $path_parts2['filename'].'_'.time().'.'.$path_parts2['extension'];
+
+		//$img2=$_FILES['img2']['name'];
+	}
+	else
+	{		
+		$hidden_img2=$_POST['hide_img2'];
 		$img2=$hidden_img2;
-	}
+		
+		// if($img2=='')
+		// {
+			
+		// }
+	}	
 
-	$img3=$_FILES['img3']['name'];
+	if(isset($_FILES['img3']['name']) && $_FILES['img3']['name']!="")
+	{	
+		$path_parts3 = pathinfo($_FILES['img3']['name']);
+		$img3 = $path_parts3['filename'].'_'.time().'.'.$path_parts3['extension'];
 
-	$hidden_img3=$_POST['hide_img3'];
-	
-	if($img3=='')
+
+		//$img3=$_FILES['img3']['name'];	
+	}	
+	else
 	{
+		$hidden_img3=$_POST['hide_img3'];
 		$img3=$hidden_img3;
+		// if($img3=='')
+		// {
+			
+		// }
 	}
 
-	$img4=$_FILES['img4']['name'];
+	if(isset($_FILES['img4']['name']) && $_FILES['img4']['name']!="")
+	{	
+		$path_parts4 = pathinfo($_FILES['img4']['name']);
+		$img4 = $path_parts4['filename'].'_'.time().'.'.$path_parts4['extension'];
 
-	$hidden_img4=$_POST['hide_img4'];
-	
-	if($img4=='')
+
+		//$img4=$_FILES['img4']['name'];
+	}
+	else
 	{
+		$hidden_img4=$_POST['hide_img4'];
 		$img4=$hidden_img4;
-	}
+		// if($img4=='')
+		// {
+			
+		// }
+	}		
 
-	$img5=$_FILES['img5']['name'];
-
-	$hidden_img5=$_POST['hide_img5'];
 	
-	if($img5=='')
+	if(isset($_FILES['img5']['name']) && $_FILES['img5']['name']!="")
 	{
-		$img5=$hidden_img5;
+		$path_parts5 = pathinfo($_FILES['img5']['name']);
+		$img5 = $path_parts5['filename'].'_'.time().'.'.$path_parts5['extension'];
+
+
+		//$img5=$_FILES['img5']['name'];
 	}
-	
+	else
+	{
+		$hidden_img5=$_POST['hide_img5'];
+		$img5=$hidden_img5;
+		// if($img5=='')
+		// {
+			
+		// }
+	}
 
 
-	$query="update tbl_product set cat_id=?,pro_name=?,available=?,pro_details=?,note=?,image1=?,image2=?,image3=?,image4=?,main_img=?,pro_price=?,f_act_price=?,f_offer_price=?,f_offer=?,is_new=?,single_price=?,meta_desc=?,meta_key=?,title=? where id=?";
+	$query="update tbl_product set cat_id=?,pro_name=?,available=?,pro_details=?,note=?,image1=?,image2=?,image3=?,image4=?,main_img=?,f_act_price=?,f_offer_price=?,f_offer=?,is_new=?,single_price=?,meta_desc=?,meta_key=?,title=? where id=?";
 		$stmt=$con->prepare($query);
-		$stmt->execute([$cat, $pro_name, $stock, $pro_detail, $note, $img1, $img2, $img3, $img4, $img5, $pro_price, $f_act_price, $offer_price, $offer, $is_new, $single_price, $meta_desc, $meta_key, $title, $id]);
-		move_uploaded_file($_FILES['img1']['tmp_name'], "img/$cat_name/".$_FILES['img1']['name']);
-		move_uploaded_file($_FILES['img2']['tmp_name'], "img/$cat_name/".$_FILES['img2']['name']);
-		move_uploaded_file($_FILES['img3']['tmp_name'], "img/$cat_name/".$_FILES['img3']['name']);
-		move_uploaded_file($_FILES['img4']['tmp_name'], "img/$cat_name/".$_FILES['img4']['name']);
-		move_uploaded_file($_FILES['img5']['tmp_name'], "img/$cat_name/".$_FILES['img5']['name']);
+		$stmt->execute([$cat, $pro_name, $stock, $pro_detail, $note, $img1, $img2, $img3, $img4, $img5, $f_act_price, $offer_price, $offer, $is_new, $single_price, $meta_desc, $meta_key, $title, $id]);
+		move_uploaded_file($_FILES['img1']['tmp_name'], "img/$cat_name/".$img1);
+		move_uploaded_file($_FILES['img2']['tmp_name'], "img/$cat_name/".$img2);
+		move_uploaded_file($_FILES['img3']['tmp_name'], "img/$cat_name/".$img3);
+		move_uploaded_file($_FILES['img4']['tmp_name'], "img/$cat_name/".$img4);
+		move_uploaded_file($_FILES['img5']['tmp_name'], "img/$cat_name/".$img5);
 	
 
 }
